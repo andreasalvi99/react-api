@@ -30,30 +30,41 @@ export default function App() {
                     <div className="card mb-3">
                       <img
                         src={actress.image}
-                        className="card-img-top"
-                        alt="..."
+                        className="card-img-top "
+                        alt={actress.name}
                       />
                       <div className="card-body">
-                        <h5 className="card-title">{actress.name}</h5>
+                        <h5 className="card-title fw-bolder fs-4">
+                          {actress.name}
+                        </h5>
                         <div className="row row-cols-2">
                           <div className="col-6">
                             <p className="card-text">
-                              Anno di nascita: {actress.birth_year}
+                              <span className="d-block fw-bold">
+                                Anno di nascita:
+                              </span>
+                              {actress.birth_year}
                             </p>
                           </div>
                           <div className="col-6">
                             <p className="card-text">
-                              Nazionalità: {actress.nationality}
+                              <span className="d-block fw-bold">
+                                Nazionalità:
+                              </span>
+                              {actress.nationality}
                             </p>
                           </div>
                           <div className="col-6">
                             <p className="card-text">
-                              Biografia: {actress.biography}
+                              <span className="d-block fw-bold">
+                                Biografia:
+                              </span>{" "}
+                              {actress.biography}
                             </p>
                           </div>
                           <div className="col-6">
                             <p className="card-text">
-                              Awards:{" "}
+                              <span className="d-block fw-bold">Awards:</span>{" "}
                               {actress.awards === "None"
                                 ? "Nessun premio"
                                 : actress.awards}
