@@ -22,11 +22,11 @@ export default function App() {
         </div>
 
         <div className="container">
-          <div className="row row-cols-4">
+          <div className="row row-cols-2 g-3">
             {actresses.map((actress) => {
               return (
                 <>
-                  <div key={actress.id} className="col h-100">
+                  <div key={actress.id} className="col">
                     <div className="card mb-3">
                       <img
                         src={actress.image}
