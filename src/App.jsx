@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 export default function App() {
   const [actresses, setActresses] = useState([]);
 
-  useState(() => {
+  useEffect(() => {
     axios
       .get("https://lanciweb.github.io/demo/api/actresses/")
       .then((response) => {
-        setActresses([response.data]);
+        console.log(response);
+
+        setActresses(response.data);
       });
   }, []);
 
@@ -21,29 +23,49 @@ export default function App() {
 
         <div className="container">
           <div className="row row-cols-4">
-            <div className="col">
-              <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Katharine_Hepburn_publicity_photograph.jpg/800px-Katharine_Hepburn_publicity_photograph.jpg"
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title mb-0">Card title</h5>
-                      <p class="card-text mb-0">This is a wider</p>
-                      <p class="card-text mb-0">This is a wider</p>
-                      <p class="card-text mb-0">This is a wider</p>
-                      <p class="card-text mb-0">This is a wider</p>
-                      <p class="card-text mb-0">This is a wider</p>
+            {actresses.map((actress) => {
+              return (
+                <>
+                  <div key={actress.id} className="col h-100">
+                    <div className="card mb-3">
+                      <img
+                        src={actress.image}
+                        className="card-img-top"
+                        alt="..."
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{actress.name}</h5>
+                        <div className="row row-cols-2">
+                          <div className="col-6">
+                            <p className="card-text">
+                              Anno di nascita: {actress.birth_year}
+                            </p>
+                          </div>
+                          <div className="col-6">
+                            <p className="card-text">
+                              Nazionalità: {actress.nationality}
+                            </p>
+                          </div>
+                          <div className="col-6">
+                            <p className="card-text">
+                              Biografia: {actress.biography}
+                            </p>
+                          </div>
+                          <div className="col-6">
+                            <p className="card-text">
+                              Awards:{" "}
+                              {actress.awards === "None"
+                                ? "Nessun premio"
+                                : actress.awards}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </>
+              );
+            })}
           </div>
         </div>
       </section>
