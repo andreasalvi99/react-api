@@ -36,7 +36,7 @@ export default function Cards({
             </div>
             <div className="col-12">
               <p className="card-text">
-                <span className="d-block fw-bold">Awards:</span>{" "}
+                <span className="d-block fw-bold">Awards:</span>
                 {awards === "None" ? "-" : awards}
               </p>
             </div>
