@@ -1,6 +1,18 @@
 /*? Bootstrap icons ?*/
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
+.card {
+  color: white;
+  background-color: transparent;
+  transition: all 0.4s ease;
+  opacity: 0.85;
+}
+
+.card:hover {
+  scale: calc(1.05);
+  opacity: 1;
+}
+
 .card-body {
   max-height: 450px;
   overflow: auto;
@@ -13,4 +25,20 @@ body {
     rgb(62, 0, 0),
     rgb(105, 1, 1)
   );
+}
+
+.card img {
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-title {
+  transition: letter-spacing 0.3s ease;
+}
+
+.card:hover .card-title {
+  letter-spacing: 1px;
 }

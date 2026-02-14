@@ -25,29 +25,27 @@ export default function App() {
               return (
                 <>
                   <div key={actress.id} className="col">
-                    <div className="card mb-3 h-100 text-bg-dark p-3">
+                    <div className="card mb-2 h-100 p-3">
                       <img
                         src={actress.image}
-                        className="card-img-top h-50 object-fit-cover"
+                        className="card-img-top h-50 object-fit-cover rounded"
                         alt={actress.name}
                       />
-                      <div className="card-body">
+                      <div className="card-body mb-2">
                         <h5 className="card-title fw-bolder fs-4 mb-3">
                           {actress.name}
                         </h5>
                         <div className="row row-cols-2">
                           <div className="col-6">
                             <p className="card-text mb-2">
-                              <span className="d-block fw-bold">
-                                Anno di nascita:
-                              </span>
+                              <span className="d-block fw-bold">Birth:</span>
                               {actress.birth_year}
                             </p>
                           </div>
                           <div className="col-6">
                             <p className="card-text mb-2">
                               <span className="d-block fw-bold">
-                                Nazionalità:
+                                Nationality:
                               </span>
                               {actress.nationality}
                             </p>
@@ -55,7 +53,7 @@ export default function App() {
                           <div className="col-12">
                             <p className="card-text mb-2">
                               <span className="d-block fw-bold">
-                                Biografia:
+                                Biography:
                               </span>{" "}
                               {actress.biography}
                             </p>
