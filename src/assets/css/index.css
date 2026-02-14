@@ -18,13 +18,9 @@
   overflow: auto;
 }
 
-body {
-  background: linear-gradient(
-    black,
-    rgb(26, 0, 0),
-    rgb(62, 0, 0),
-    rgb(105, 1, 1)
-  );
+body,
+.card-body {
+  background: linear-gradient(black, rgb(26, 0, 0), rgb(62, 0, 0));
 }
 
 .card img {

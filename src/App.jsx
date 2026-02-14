@@ -20,7 +20,7 @@ export default function App() {
         <div className="container text-center"></div>
 
         <div className="container mt-5">
-          <div className="row row-cols-3 g-3">
+          <div className="row row-cols-3 g-4">
             {actresses.map((actress) => {
               return (
                 <>
@@ -31,7 +31,7 @@ export default function App() {
                         className="card-img-top h-50 object-fit-cover rounded"
                         alt={actress.name}
                       />
-                      <div className="card-body mb-2">
+                      <div className="card-body rounded mb-2">
                         <h5 className="card-title fw-bolder fs-4 mb-3">
                           {actress.name}
                         </h5>
