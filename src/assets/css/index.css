@@ -18,8 +18,7 @@
   overflow: auto;
 }
 
-body,
-.card-body {
+body {
   background: linear-gradient(black, rgb(26, 0, 0), rgb(62, 0, 0));
 }
 
