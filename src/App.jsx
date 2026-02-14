@@ -17,10 +17,8 @@ export default function App() {
 
   return (
     <>
-      <section>
-        <div className="container text-center"></div>
-
-        <div className="container mt-5">
+      <section className="p-5">
+        <div className="container">
           <div className="row row-cols-3 g-4">
             {actresses.map((actress) => {
               return (
