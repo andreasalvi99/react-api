@@ -14,7 +14,7 @@ export default function Cards({
           className="card-img-top h-50 object-fit-cover rounded"
           alt={name}
         />
-        <div className="card-body rounded mb-2">
+        <div className="card-body rounded">
           <h5 className="card-title fw-bolder fs-4 mb-3">{name}</h5>
           <div className="row row-cols-2">
             <div className="col-6">

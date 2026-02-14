@@ -27,7 +27,7 @@ export default function App() {
     <section className="p-5">
       <div className="container">
         <h1 className="text-white">ATTRICI</h1>
-        <div className="row row-cols-3 g-4">
+        <div className="row row-cols-3 gx-3 gy-0">
           {actresses.map((actress) => {
             return (
               <Cards
@@ -45,7 +45,7 @@ export default function App() {
       </div>
       <div className="container">
         <h2 className="h1 text-white">ATTORI</h2>
-        <div className="row row-cols-3 g-4">
+        <div className="row row-cols-3 gx-3 gy-0">
           {actors.map((actor) => {
             return (
               <Cards
