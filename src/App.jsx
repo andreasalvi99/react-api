@@ -16,26 +16,24 @@ export default function App() {
   }, []);
 
   return (
-    <>
-      <section className="p-5">
-        <div className="container">
-          <div className="row row-cols-3 g-4">
-            {actresses.map((actress) => {
-              return (
-                <Cards
-                  key={actress.id}
-                  image={actress.image}
-                  name={actress.name}
-                  birth_year={actress.birth_year}
-                  nationality={actress.nationality}
-                  biography={actress.biography}
-                  awards={actress.awards}
-                />
-              );
-            })}
-          </div>
+    <section className="p-5">
+      <div className="container">
+        <div className="row row-cols-3 g-4">
+          {actresses.map((actress) => {
+            return (
+              <Cards
+                key={actress.id}
+                image={actress.image}
+                name={actress.name}
+                birth_year={actress.birth_year}
+                nationality={actress.nationality}
+                biography={actress.biography}
+                awards={actress.awards}
+              />
+            );
+          })}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
