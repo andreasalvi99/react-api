@@ -17,29 +17,27 @@ export default function App() {
   return (
     <>
       <section>
-        <div className="container text-center">
-          <h1>CIAOOOO</h1>
-        </div>
+        <div className="container text-center"></div>
 
-        <div className="container">
-          <div className="row row-cols-2 g-3">
+        <div className="container mt-5">
+          <div className="row row-cols-3 g-3">
             {actresses.map((actress) => {
               return (
                 <>
                   <div key={actress.id} className="col">
-                    <div className="card mb-3">
+                    <div className="card mb-3 h-100 text-bg-dark p-3">
                       <img
                         src={actress.image}
-                        className="card-img-top "
+                        className="card-img-top h-50 object-fit-cover"
                         alt={actress.name}
                       />
                       <div className="card-body">
-                        <h5 className="card-title fw-bolder fs-4">
+                        <h5 className="card-title fw-bolder fs-4 mb-3">
                           {actress.name}
                         </h5>
                         <div className="row row-cols-2">
                           <div className="col-6">
-                            <p className="card-text">
+                            <p className="card-text mb-2">
                               <span className="d-block fw-bold">
                                 Anno di nascita:
                               </span>
@@ -47,27 +45,25 @@ export default function App() {
                             </p>
                           </div>
                           <div className="col-6">
-                            <p className="card-text">
+                            <p className="card-text mb-2">
                               <span className="d-block fw-bold">
                                 Nazionalità:
                               </span>
                               {actress.nationality}
                             </p>
                           </div>
-                          <div className="col-6">
-                            <p className="card-text">
+                          <div className="col-12">
+                            <p className="card-text mb-2">
                               <span className="d-block fw-bold">
                                 Biografia:
                               </span>{" "}
                               {actress.biography}
                             </p>
                           </div>
-                          <div className="col-6">
+                          <div className="col-12">
                             <p className="card-text">
                               <span className="d-block fw-bold">Awards:</span>{" "}
-                              {actress.awards === "None"
-                                ? "Nessun premio"
-                                : actress.awards}
+                              {actress.awards === "None" ? "-" : actress.awards}
                             </p>
                           </div>
                         </div>
